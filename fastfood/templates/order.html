@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block  content %}
+
+<div class="container inner">
+    <h2 class="section-title text-center">Fast food buyurtirish</h2>
+    <p class="lead main text-center">Aperatorimiz bir necha daqiqada siz bilan bog'lanadi</p>
+</div>
+<form class="form form-table" id='post' method="post" action="">
+{% csrf_token %}
+<div class="container">
+<div class="row">
+   <div class="col-lg-6 col-md-6 form-group">
+     <label class="sr-only" for="first_name1">Ism</label>
+     <input class="form-control hint" type="text" id="first_name1" name="first_name" placeholder="Ism" required="">
+   </div>
+   <div class="col-lg-6 col-md-6 form-group">
+     <label class="sr-only" for="last_name1">Familya</label>
+     <input class="form-control hint" type="text" id="last_name1" name="last_name" placeholder="Familya" required="">
+   </div>
+ </div>
+ <center>
+ <div class="row">
+   <div class="col-lg-12 col-md-12 form-group">
+     <label class="sr-only" for="phone1">Tel nomer</label>
+     <input class="form-control hint" type="text" id="phone1" name="phone" placeholder="Tel nomer" required="">
+   </div>
+ </div>
+  <div class="row" style="margin-bottom: 100px;">
+    <div class="col-lg-12 col-md-12">
+      <button type="submit" class="btn btn-danger btn-lg">Jo'natish</button>
+    </div>
+  </div>
+</center>
+</div>
+</form>
+{% endblock %}
